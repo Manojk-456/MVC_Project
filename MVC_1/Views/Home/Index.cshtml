@@ -1,0 +1,30 @@
+﻿<h1>This is Student Details Page</h1>
+
+@model MVC_1.Models.StudentModel
+    @Html.TextBoxFor(m=>m.Roll)
+    @Html.TextBoxFor(m=>m.name)
+    @Html.TextBoxFor(m=>m.email)
+    @Html.TextBoxFor(m=>m.mob)
+    @Html.TextBoxFor(m=>m.address)
+
+<h1>===========ViewBag Data==========</h1>
+<h4>@ViewBag.Sub</h4>
+<h4>@ViewBag.Teacher</h4>
+<h4>@ViewBag.College</h4>
+<h4>@ViewBag.Salary</h4>
+
+<ul>
+    @foreach (var item in ViewBag.List)
+    {
+        <li>@item</li>;
+    }
+</ul>
+
+
+<h1>=======ViewData Data=================</h1>
+<h3>@ViewData["department"]</h3>
+<h3>@ViewData["salary"]</h3>
+<h3>@ViewData["company"]</h3>
+
+<h1>===========Session Data==============</h1>
+<h3>@Session["data"]</h3>
